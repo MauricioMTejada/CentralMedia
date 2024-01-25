@@ -2,7 +2,7 @@ import imageFmAyer from "../public/radioLogos/fmayer.png";
 import imageNihuil from "../public/radioLogos/nihuil.png";
 import imagePelagatos from "../public/radioLogos/pelagatos2.png";
 
-interface LiveRadio {
+export interface LiveRadio {
     url: string;
     nameRadio: string;
     image: string;
@@ -10,7 +10,7 @@ interface LiveRadio {
     origin: string;
   }
 
-const LiveRadios: LiveRadio[] = [
+export const LiveRadios: LiveRadio[] = [
     {url: "https://icecast.unomedios.com.ar/ayer",
         nameRadio: "FM Ayer",
         image: imageFmAyer.src,
@@ -49,4 +49,4 @@ const LiveRadios: LiveRadio[] = [
     // },
 ]
 
-export default LiveRadios;
+// export default LiveRadios;
