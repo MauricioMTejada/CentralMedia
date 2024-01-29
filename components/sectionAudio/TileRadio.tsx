@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from 'react'
 
 import { Box, Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material';
 import { DataContext } from '@/context';
+const RadioBrowser = require('radio-browser')
 
 import onIndicator from "@/public/on_indicator2.png"
 import offIndicator from "@/public/on_indicator3.png"
@@ -11,12 +12,35 @@ export const TileRadio = () => {
 
 	const { radioSet, setRadioSet } = useContext(DataContext)
 
+	const stationFilter = "all"
+
+	const setupApi = async (stationFilter: any) => {
+        const api = RadioBrowser
+
+        const stations = await api
+            .searchStations({
+                language: "",
+                tag: stationFilter,
+                limit: 1000,
+            })
+            .then((data: any) => {
+                console.log(data);
+                return data;
+            });
+
+        return stations;
+    };
+
+	setupApi("all");
+
+
+
 
 	return (
-			<div>
+			<div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-evenly"}}>
 				{LiveRadios.map((radio, index) => (
 					<div key={index}>
-						<Card sx={{marginBottom: "10px"}}>
+						<Card sx={{marginBottom: "10px", marginLeft: "10px"}}>
 							<CardActionArea
 								sx={{ display: "flex",  }}
 								onClick={() => setRadioSet(radio)}
@@ -24,7 +48,7 @@ export const TileRadio = () => {
 								<CardMedia
 									component="img"
 									alt={radio.nameRadio}
-									sx={{ width: 100, height: 100, mx: "auto", my: "auto" }}
+									sx={{ width: 90, height: 90, mx: "auto", my: "auto", marginTop: "10px", marginBottom: "10px", marginLeft: "10px" }}
 									image={radio.image}
 								/>
 								<CardContent sx={{ width: 300 }}>
