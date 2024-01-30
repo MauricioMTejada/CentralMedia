@@ -10,7 +10,7 @@ const StreamVideo = () => {
         <div className="grid grid-cols-3 gap-1" >
             {dataChannels.map( (myObjet) => {
                 return(
-                    <div>
+                    <div key={myObjet.nameChannel}>
                         <div className="bg-[#003332] rounded-t-lg flex items-center justify-center p-2 font-bold">{myObjet.nameChannel}</div>
                         <div className="bg-[#003332] flex items-center justify-center">
                         <YoutubePlayer url={myObjet.url}
