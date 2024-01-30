@@ -10,7 +10,7 @@ export interface RadioState {
 }
 
 const RADIO_INITIAL_STATE: RadioState = {
-    radioSet: {frequency: "", image: "", nameRadio: "", origin: "", url: ""},
+    radioSet: {frequency: "", image: "", nameRadio: "", origin: "", url: "", source: "local", oficialPage: ""},
     sidemenuOpen: false,
     isAddingEntry: false,
     isDragging: false,
