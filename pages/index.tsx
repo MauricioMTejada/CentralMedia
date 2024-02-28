@@ -5,6 +5,7 @@ import StreamVideo from "@/components/sectionVideo/StreamVideo";
 import dynamic from "next/dynamic";
 import RadioBar from "@/components/sectionAudio/RadioBar";
 import { TileRadio } from "@/components/sectionAudio/TileRadio";
+import Head from "next/head";
 
 const NoSSR = dynamic(() => import("../components/sectionVideo/StreamVideo"), {
 	ssr: false,
@@ -14,8 +15,11 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
 	return (
-		<>
-			<div >
+		<div>
+			<Head>
+				<title>CentralMedia</title>
+			</Head>
+			<div>
 				{/* <div style={{ flex: "3", backgroundColor: "#3498db", padding: "10px" }}>
 					<NoSSR />
 				</div>
@@ -24,7 +28,7 @@ export default function Home() {
 					<StreamRadio />
 				</div> */}
 
-				<div style={{ height: "84px", marginBottom: "10px"}}>
+				<div style={{ height: "84px", marginBottom: "10px" }}>
 					{/* Relleno para la navBar */}
 				</div>
 
@@ -32,6 +36,6 @@ export default function Home() {
 
 				<TileRadio />
 			</div>
-		</>
+		</div>
 	);
 }
