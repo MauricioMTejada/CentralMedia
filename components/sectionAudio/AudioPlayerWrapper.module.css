@@ -1,0 +1,50 @@
+.audioPlayer {
+    position: absolute;
+    background-color: #84E5EC;
+    width: 200px;
+    height: 62px;
+    justify-content: space-around;
+    top: 184px;
+    /* left: 50%; */
+    border: 3px solid #1A313F;
+    /* border: 3px solid #44788D; */
+    border-radius: 3px;
+}
+
+/* Estilos adicionales para sobrescribir los estilos por defecto del audio player */
+.audioPlayer :global(.rhap_progress-section) {
+    display: none;
+}
+
+.audioPlayer :global(.rhap_controls-section) {
+    margin-top: 0px;
+}
+
+.audioPlayer :global(.rhap_container) {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.audioPlayer :global(.rhap_volume-controls) {
+    justify-content: center;
+}
+
+.audioPlayer :global(.rhap_main-controls-button) {
+    color: #1A313F;
+}
+
+.audioPlayer :global(.rhap_volume-button) {
+    color: #1A313F;
+}
+
+.audioPlayer :global(.rhap_volume-filled) {
+    background-color: #1A313F;
+}
+
+.audioPlayer :global(.rhap_volume-indicator) {
+    background: #1A313F;
+}
+
+.audioPlayer :global(.rhap_volume-bar) {
+    background: #FFEDAD;
+}

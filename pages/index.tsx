@@ -20,18 +20,6 @@ export default function Home() {
 				<title>CentralMedia</title>
 			</Head>
 			<div>
-				{/* <div style={{ flex: "3", backgroundColor: "#3498db", padding: "10px" }}>
-					<NoSSR />
-				</div>
-
-				<div style={{ flex: "1", backgroundColor: "#2ecc71", padding: "10px" }}>
-					<StreamRadio />
-				</div> */}
-
-				<div style={{ height: "84px", marginBottom: "10px" }}>
-					{/* Relleno para la navBar */}
-				</div>
-
 				<RadioBar />
 
 				<TileRadio />

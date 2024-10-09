@@ -1,0 +1,1 @@
+export { default as master_radio } from './master_radio.jpeg';

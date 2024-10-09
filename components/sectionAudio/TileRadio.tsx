@@ -24,7 +24,7 @@ export const TileRadio = () => {
                 limit: 1000,
             })
             .then((data: any) => {
-                console.log(data);
+                // console.log(data);
                 return data;
             });
 
