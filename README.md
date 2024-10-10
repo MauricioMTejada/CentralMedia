@@ -13,3 +13,8 @@ In addition to audio playback, the CentralMedia project is designed to be compat
 ### Usage:
 
 2. Run `npm run dev` to start the development server.
+
+### Adding Radio Station:
+
+3. Add info in `data\dataRadio.ts` file.
+4. Add image radio in `public\radioLogos` folder.
