@@ -5,8 +5,7 @@ import { Box, Card, CardActionArea, CardContent, CardMedia, Typography } from '@
 import { DataContext } from '@/context';
 const RadioBrowser = require('radio-browser')
 
-import onIndicator from "@/public/on_indicator2.png"
-import offIndicator from "@/public/on_indicator3.png"
+import { onIndicator, offIndicator } from "@/public/images/index";
 
 export const TileRadio = () => {
 
@@ -40,7 +39,7 @@ export const TileRadio = () => {
 			<div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-evenly"}}>
 				{LiveRadios.map((radio, index) => (
 					<div key={index}>
-						<Card sx={{marginBottom: "10px", marginLeft: "10px"}}>
+						<Card sx={{marginBottom: "10px", marginLeft: "10px", backgroundColor: "#1a313f"}}>
 							<CardActionArea
 								sx={{ display: "flex",  }}
 								onClick={() => setRadioSet(radio)}

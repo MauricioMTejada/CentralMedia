@@ -1,13 +1,12 @@
 .audioPlayer {
     position: absolute;
-    background-color: #84E5EC;
+    background-color: var(--color-primary);
     width: 200px;
     height: 62px;
     justify-content: space-around;
     top: 184px;
     /* left: 50%; */
-    border: 3px solid #1A313F;
-    /* border: 3px solid #44788D; */
+    border: 3px solid var(--color-border);
     border-radius: 3px;
 }
 
@@ -30,21 +29,21 @@
 }
 
 .audioPlayer :global(.rhap_main-controls-button) {
-    color: #1A313F;
+    color: var(--color-border);
 }
 
 .audioPlayer :global(.rhap_volume-button) {
-    color: #1A313F;
+    color: var(--color-border);
 }
 
 .audioPlayer :global(.rhap_volume-filled) {
-    background-color: #1A313F;
+    background-color: var(--color-volume-filled);
 }
 
 .audioPlayer :global(.rhap_volume-indicator) {
-    background: #1A313F;
+    background: var(--color-volume-filled);
 }
 
 .audioPlayer :global(.rhap_volume-bar) {
-    background: #FFEDAD;
+    background: var(--color-volume-bg);
 }

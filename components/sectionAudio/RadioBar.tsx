@@ -1,24 +1,18 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import styles from "./RadioBar.module.css";
 import { master_radio } from "@/public/images";
-import AudioPlayerWrapper from "./AudioPlayerWrapper"; // Subcomponente de audio
+import AudioPlayerWrapper from "./AudioPlayerWrapper";
 
-const RadioBar = () => {
+const RadioBar: React.FC = () => {
 	return (
 		<div className={styles.imageContainer}>
-			{/* Imagen de Radio */}
 			<Image
 				src={master_radio}
 				alt="Master Radio"
-				layout="fixed"
-				width={740}
-				height={416}
+				priority
+				style={{ width: '740px', height: 'auto' }}
 			/>
-
-			{/* Player */}
 			<AudioPlayerWrapper />
 		</div>
 	);

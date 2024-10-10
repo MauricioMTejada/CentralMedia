@@ -1,11 +1,13 @@
-import Image from "next/image";
+"use client";
+
 import { Inter } from "next/font/google";
-import StreamRadio from "@/components/sectionAudio/RadioBar";
-import StreamVideo from "@/components/sectionVideo/StreamVideo";
 import dynamic from "next/dynamic";
 import RadioBar from "@/components/sectionAudio/RadioBar";
-import { TileRadio } from "@/components/sectionAudio/TileRadio";
+import { TileRadio } from "@/components/tileRadio/TileRadio";
 import Head from "next/head";
+import { useContext, useEffect } from "react";
+import { DataContext } from "@/context";
+import { LiveRadios } from "@/data/dataRadio";
 
 const NoSSR = dynamic(() => import("../components/sectionVideo/StreamVideo"), {
 	ssr: false,
@@ -14,6 +16,16 @@ const NoSSR = dynamic(() => import("../components/sectionVideo/StreamVideo"), {
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+
+	// Ésta sección es para cargar una radio aleatoria
+		const { setRadioSet } = useContext(DataContext);
+
+		useEffect(() => {
+			const randomRadio =
+				LiveRadios[Math.floor(Math.random() * LiveRadios.length)];
+			setRadioSet(randomRadio);
+		}, []);
+
 	return (
 		<div>
 			<Head>
@@ -21,7 +33,6 @@ export default function Home() {
 			</Head>
 			<div>
 				<RadioBar />
-
 				<TileRadio />
 			</div>
 		</div>
