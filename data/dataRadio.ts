@@ -7,6 +7,9 @@ import imageProdan from "../public/radioLogos/estacionProdan.png";
 import imageLvDiez from "../public/radioLogos/lvdiez.webp";
 import imageRadioDos from "../public/radioLogos/radiodos.png";
 import imageMetropolitana from "../public/radioLogos/metropolitana.png";
+import imageRadioA from "../public/radioLogos/radioa.png";
+import imageVorterix from "../public/radioLogos/vorterix.svg";
+import imageAndina from "../public/radioLogos/andina.png";
 
 export interface LiveRadio {
 	url: string;
@@ -103,6 +106,36 @@ export const LiveRadios: LiveRadio[] = [
 		origin: "Ciudad de Mendoza, Mendoza",
 		source: "local",
 		oficialPage: "https://metropolitana953.com",
+	},
+
+	{
+		url: "https://masservidor.net:7180/stream/;type=mp3",
+		nameRadio: "Radio A",
+		image:  imageRadioA.src,
+		frequency: "105.7",
+		origin: "Ciudad de Mendoza, Mendoza",
+		source: "local",
+		oficialPage: "https://www.laradioa.com",
+	},
+
+	{
+		url: "https://ice2.edge-apps.net/radio1_high-20057.audio",
+		nameRadio: "Vórterix",
+		image:  imageVorterix.src,
+		frequency: "streaming",
+		origin: "Buenos Aires",
+		source: "local",
+		oficialPage: "https://www.vorterix.com",
+	},
+
+	{
+		url: "https://radios.streamingdha.com.ar:9670/;?type=http&nocache=3745",
+		nameRadio: "Andina",
+		image:  imageAndina.src,
+		frequency: "90.1",
+		origin: "Ciudad de Mendoza, Mendoza",
+		source: "local",
+		oficialPage: "http://www.radioandina.com.ar",
 	},
 
 	// {
