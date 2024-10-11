@@ -11,6 +11,7 @@ const AudioPlayerWrapper: React.FC = () => {
     const audioPlayerRef = useRef<any>(null);
 
     const handleWheel = (e: WheelEvent) => {
+        e.preventDefault(); // Prevenir el comportamiento predeterminado del scroll
         if (audioPlayerRef.current?.audio.current) {
             const currentVolume =
                 audioPlayerRef.current.audio.current.volume || 0;
@@ -25,7 +26,7 @@ const AudioPlayerWrapper: React.FC = () => {
     useEffect(() => {
         const audioPlayerElement = audioPlayerRef.current?.container.current;
         if (audioPlayerElement instanceof HTMLElement) {
-            audioPlayerElement.addEventListener("wheel", handleWheel);
+            audioPlayerElement.addEventListener("wheel", handleWheel, { passive: false });
         }
         return () => {
             if (audioPlayerElement instanceof HTMLElement) {
